@@ -2,13 +2,13 @@
 
 String will never be empty and you do not need to account for different data types. */
 
-//my solution
+//my solution 
 function findShort(s){
     let arr = s.split(' ').sort((a, b) => a.length - b.length)
     return arr[0].length
   }
 
-//best practices, most clever 
+//best practices, most clever
 function findShort(s){
     return Math.min.apply(null, s.split(' ').map(w => w.length));
   }
