@@ -15,9 +15,11 @@ For JavaScript: return true or false
  */
 
 function isPythagoreanTriple(integers) {
-    if(integers[2] ** 2 === (integers[0] ** 2 + integers[1] ** 2)){
-      return true
-    }else{
-      return false
-    }
+  let sortedInts = integers.sort(function(a, b){return a - b });
+  
+  if(sortedInts[2] ** 2 === (sortedInts[0] ** 2 + sortedInts[1] ** 2)){
+    return true
+  }else{
+    return false
   }
+}
